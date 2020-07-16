@@ -10,7 +10,8 @@
 
 namespace db {
 
-namespace  {
+namespace
+{
 class DBCloser {
 public:
     void operator()(QSqlDatabase* db){
@@ -96,6 +97,7 @@ bool ConnectionManager::ConnectionManagerPrivate::setupWorkspace()
 
     const QString location {QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)};
     const QString fullPath {location + "/" + databaseName};
+    //const QString fullPath {databaseName};
 
     dbPath = fullPath;
 
@@ -119,8 +121,8 @@ bool ConnectionManager::ConnectionManagerPrivate::setupTables()
             "CREATE TABLE IF NOT EXISTS Contacts"
             "("
             "Name TEXT,"
-            "Surname TEXT"
-            "PhoneNumber TEXT"
+            "Surname TEXT,"
+            "PhoneNumber TEXT,"
             "UNIQUE(Name, Surname)" //without duplicates
             ")"
         }

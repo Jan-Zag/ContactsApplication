@@ -7,6 +7,7 @@
 namespace db {
 class Executor
 {
+public:
     Executor();
     //remove copy
     Q_DISABLE_COPY(Executor);

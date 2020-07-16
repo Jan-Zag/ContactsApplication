@@ -4,9 +4,6 @@
 namespace db {
 class ConnectionManager
 {
-    ConnectionManager();
-    struct ConnectionManagerPrivate;
-    std::unique_ptr<ConnectionManagerPrivate> m_d;
 public:
     //delete copying
     ConnectionManager(const ConnectionManager&) = delete;
@@ -17,6 +14,10 @@ public:
     static ConnectionManager& instance();
 
     bool isValid() const;
+private:
+    ConnectionManager();
+    struct ConnectionManagerPrivate;
+    std::unique_ptr<ConnectionManagerPrivate> m_d;
 };
 }
 

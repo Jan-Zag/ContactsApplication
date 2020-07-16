@@ -4,9 +4,7 @@ import Contacts 1.0
 
 BaseListView {
     id: root
-    model: ContactsModel {
-
-    }
+    model: ContactsModel {}
 
     delegate: ContactDelegate {
         width: root.width

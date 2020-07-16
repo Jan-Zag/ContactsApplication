@@ -33,6 +33,11 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+INCLUDEPATH += $$PWD/include
+INCLUDEPATH += $$PWD/../shared/include
+
+LIBS += -L$$PWD/../shared/lib/ -lDBManager
+
 HEADERS += \
     contact.h \
     contactsmodel.h \
