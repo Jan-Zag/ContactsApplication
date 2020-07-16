@@ -96,8 +96,8 @@ bool ConnectionManager::ConnectionManagerPrivate::setupWorkspace()
 #endif
 
     const QString location {QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)};
-    const QString fullPath {location + "/" + databaseName};
-    //const QString fullPath {databaseName};
+    //const QString fullPath {location + "/" + databaseName};
+    const QString fullPath {databaseName};
 
     dbPath = fullPath;
 

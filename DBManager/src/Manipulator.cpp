@@ -22,7 +22,7 @@ QString Manipulator::generateBindString(size_t recordSize) const
 
 QString Manipulator::generateInsertQuery(const QString &tableName, size_t recordSize) const
 {
-    QString query {"INSERT INTO" + tableName + " (" + TablesMapping.at(tableName) + ") " + "VALUES ("};
+    QString query {"INSERT INTO " + tableName + " (" + TablesMapping.at(tableName) + ") " + "VALUES ("};
 
     query += generateBindString(recordSize);
     query += ")";
