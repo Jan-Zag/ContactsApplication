@@ -33,28 +33,31 @@ BaseListDelegate {
         anchors.verticalCenter: root.verticalCenter
         width: root.height - 50
         height: root.height - 50
-        source: Resources.contacts.favoriteFalseIcon
+
+        source: isFavorite ? Resources.contacts.favoriteTrueIcon : Resources.contacts.favoriteFalseIcon
 
         property bool pressed: false
 
         MouseArea {
-            id: mouse_area8
+            id: mouse_area
             anchors.fill: parent
 
             onReleased: {
-                _buttonFavorite.opacity = 1.0
+                _buttonFavorite.opacity = Style.defaultOpacity
 
                 if (_buttonFavorite.pressed == false) {
                     _buttonFavorite.state = "FavoriteTrue"
                     _buttonFavorite.pressed = true
                 }
                 else{
-                _buttonFavorite.state = "FavoriteFalse"
-                _buttonFavorite.pressed = false
+                    _buttonFavorite.state = "FavoriteFalse"
+                    _buttonFavorite.pressed = false
                 }
+
             }
             onPressed: {
-                _buttonFavorite.opacity = 0.4
+                _buttonFavorite.opacity = Style.disableOpacity
+
             }
         }
 

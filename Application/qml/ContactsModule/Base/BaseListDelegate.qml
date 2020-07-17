@@ -11,7 +11,7 @@ Rectangle {
         anchors.fill: root
         onClicked: {
             var factory = Qt.createComponent( "InfoWindow.qml");
-            factory.createObject( _buttonCall );
+            factory.createObject( root );
         }
     }
 }

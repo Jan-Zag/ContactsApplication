@@ -29,3 +29,7 @@ bool Contact::isFavorite() const
 {
     return m_isFavorite;
 }
+
+void Contact::setFavorite(const bool isFavorite) {
+    this->m_isFavorite = isFavorite;
+}

@@ -15,4 +15,6 @@ public:
     QString firstName() const;
     QString surname() const;
     bool isFavorite() const;
+
+    void setFavorite(const bool isFavorite);
 };
