@@ -22,7 +22,8 @@ private:
     enum ContactRoles{
         NemaeRole = Qt::UserRole + 1,
         SurnameRole,
-        PhoneNumberRole
+        PhoneNumberRole,
+        FavoriteRole
     };
 
     bool updateContacts();

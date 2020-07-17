@@ -123,6 +123,7 @@ bool ConnectionManager::ConnectionManagerPrivate::setupTables()
             "Name TEXT,"
             "Surname TEXT,"
             "PhoneNumber TEXT,"
+            "isFavorite INTEGER,"
             "UNIQUE(Name, Surname)" //without duplicates
             ")"
         }

@@ -7,6 +7,6 @@ static const std::map<DBTables, QString> TableMapper {
 };
 
 static const std::map<QString, QString> TablesMapping {
-    {"Contacts", "Name, Surname, PhoneNumber"}
+    {"Contacts", "Name, Surname, PhoneNumber, isFavorite"}
 };
 }

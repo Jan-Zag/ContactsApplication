@@ -28,15 +28,15 @@ Processor::~Processor()
 #ifdef BUILD_TESTS
 void Processor::ProcessorPrivate::insertMockData()
 {
-    manipulator.insertRow("Contacts", {{"Fred", "Wilson", "380993091846"}});
-    manipulator.insertRow("Contacts", {{"Bred", "Holson", "380993091841"}});
-    manipulator.insertRow("Contacts", {{"Fredy", "Horson", "380993091842"}});
-    manipulator.insertRow("Contacts", {{"Glir", "Gason", "380993091843"}});
-    manipulator.insertRow("Contacts", {{"Maret", "Diter", "380993091844"}});
-    manipulator.insertRow("Contacts", {{"Alex", "Kilerson", "380993091845"}});
-    manipulator.insertRow("Contacts", {{"Vidy", "Bidy", "380993091847"}});
-    manipulator.insertRow("Contacts", {{"Po", "Kilop", "380993091848"}});
-    manipulator.insertRow("Contacts", {{"Ivan", "Chtorm", "380993091849"}});
+    manipulator.insertRow("Contacts", {{"Fred", "Wilson", "380993091846", "true"}});
+    manipulator.insertRow("Contacts", {{"Bred", "Holson", "380993091841" , "false"}});
+    manipulator.insertRow("Contacts", {{"Fredy", "Horson", "380993091842", "false"}});
+    manipulator.insertRow("Contacts", {{"Glir", "Gason", "380993091843", "false"}});
+    manipulator.insertRow("Contacts", {{"Maret", "Diter", "380993091844", "false"}});
+    manipulator.insertRow("Contacts", {{"Alex", "Kilerson", "380993091845", "false"}});
+    manipulator.insertRow("Contacts", {{"Vidy", "Bidy", "380993091847", "false"}});
+    manipulator.insertRow("Contacts", {{"Po", "Kilop", "380993091848", "false"}});
+    manipulator.insertRow("Contacts", {{"Ivan", "Chtorm", "380993091849", "false"}});
 }
 #endif
 

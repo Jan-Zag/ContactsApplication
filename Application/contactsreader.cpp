@@ -20,7 +20,8 @@ std::vector<Contact> transform(const std::vector<db::DBEntry>& source)
                    [](const db::DBEntry& entry) {
         return Contact {entry[1].toString(),
                         entry[2].toString(),
-                        entry[3].toString()};
+                        entry[3].toString(),
+                        entry[4].toBool()};
     });
     return target;
 }

@@ -21,6 +21,7 @@ QHash<int, QByteArray> ContactsModel::roleNames() const
     roles[ContactRoles::NemaeRole] = "name";
     roles[ContactRoles::SurnameRole] = "surname";
     roles[ContactRoles::PhoneNumberRole] = "phoneNumber";
+    roles[ContactRoles::FavoriteRole] = "isFavorite";
 
     return roles;
 }
@@ -49,6 +50,9 @@ QVariant ContactsModel::data(const QModelIndex &index, int role) const
     }
     case ContactRoles::PhoneNumberRole: {
         return QVariant::fromValue(contact.phone());
+    }
+    case ContactRoles::FavoriteRole: {
+        return QVariant::fromValue(contact.isFavorite());
     }
     default: {
         return true;
