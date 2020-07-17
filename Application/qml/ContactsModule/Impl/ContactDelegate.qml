@@ -21,9 +21,53 @@ BaseListDelegate {
         anchors.right: root.right
         anchors.rightMargin: Style.defaultOffset
         anchors.verticalCenter: root.verticalCenter
-        width: root.height - 20
-        height: root.height - 20
+        width: root.height - 25
+        height: root.height - 25
         image.source: Resources.contacts.callIcon
+    }
+
+    ButtonFavorite {
+        id: _buttonFavorite
+        anchors.right: _buttonCall.left
+        anchors.rightMargin: Style.defaultOffset
+        anchors.verticalCenter: root.verticalCenter
+        width: root.height - 50
+        height: root.height - 50
+        source: Resources.contacts.favoriteFalseIcon
+
+        property bool pressed: false
+
+        MouseArea {
+            id: mouse_area8
+            anchors.fill: parent
+
+            onReleased: {
+                _buttonFavorite.opacity = 1.0
+
+                if (_buttonFavorite.pressed == false) {
+                    _buttonFavorite.state = "FavoriteTrue"
+                    _buttonFavorite.pressed = true
+                }
+                else{
+                _buttonFavorite.state = "FavoriteFalse"
+                _buttonFavorite.pressed = false
+                }
+            }
+            onPressed: {
+                _buttonFavorite.opacity = 0.4
+            }
+        }
+
+        states:[
+            State {
+                name: "FavoriteTrue"
+                    PropertyChanges { target: _buttonFavorite; source: Resources.contacts.favoriteTrueIcon}
+            },
+            State {
+                name: "FavoriteFalse"
+                    PropertyChanges { target: _buttonFavorite; source: Resources.contacts.favoriteFalseIcon}
+            }
+        ]
     }
 
     Column {

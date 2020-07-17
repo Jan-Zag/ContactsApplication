@@ -5,4 +5,5 @@ BaseText 1.0  BaseText.qml
 ImageBubble 1.0 ImageBubble.qml
 ButtonCall 1.0 ButtonCall.qml
 ButtonAdd 1.0 ButtonAdd.qml
+ButtonFavorite 1.0 ButtonFavorite.qml
 AddContactWindow 1.0 AddContactWindow.qml

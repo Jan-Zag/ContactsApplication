@@ -25,5 +25,8 @@
         <file>qml/ContactsModule/Base/InfoWindow.qml</file>
         <file>qml/ContactsModule/Base/ButtonAdd.qml</file>
         <file>qml/ContactsModule/Base/AddContactWindow.qml</file>
+        <file>qml/resources/favorite_false_icon.svg</file>
+        <file>qml/resources/favorite_true_icon.svg</file>
+        <file>qml/ContactsModule/Base/ButtonFavorite.qml</file>
     </qresource>
 </RCC>

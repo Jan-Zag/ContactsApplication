@@ -9,5 +9,7 @@ Item {
         readonly property string buttonInfoIcon: "qrc:/qml/resources/contact_info_icon.svg"
         readonly property string buttonPlusIcon: "qrc:/qml/resources/contact_plus_icon.svg"
         readonly property string callIcon: "qrc:/qml/resources/call_icon.svg"
+        readonly property string favoriteTrueIcon: "qrc:/qml/resources/favorite_true_icon.svg"
+        readonly property string favoriteFalseIcon: "qrc:/qml/resources/favorite_false_icon.svg"
     }
 }
